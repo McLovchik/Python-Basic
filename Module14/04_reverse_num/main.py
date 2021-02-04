@@ -1,13 +1,14 @@
 n = float(input('Первое число: '))
 k = float(input('Второе число: '))
 
-# TODO: Аналогично 03:)
+
 def reverse(number):
     reverse_number = 0
     while number != 0:
         reverse_number = reverse_number * 10 + number % 10
         number //= 10
     return reverse_number
+
 
 n_reverse_int = reverse(int(n))
 k_reverse_int = reverse(int(k))

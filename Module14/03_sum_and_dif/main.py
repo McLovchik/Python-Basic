@@ -1,5 +1,6 @@
 number = int(input('Введите число: '))
 
+# TODO: До и после функции должно быть по 2 пустые строки;)
 def summ(number):
     summa = 0
     for i in range(1, number + 1):
@@ -29,6 +30,7 @@ print()
 print('===================')
 print()
 
+# TODO: В конце файла должна быть одна пустая строка:)
 print('По примеру работы программы')
 print('Сумма чисел:', sum_number(number))
 print('Кол-во цифр в числе:', numbers(number))

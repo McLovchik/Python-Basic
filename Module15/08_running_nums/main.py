@@ -1,8 +1,14 @@
+def copy_fun(array, quantity_elements):
+    new_fun = []
+    for ind in range(quantity_elements):
+        new_fun.append(array[ind])
+    return new_fun
+
+
 shift = int(input('Сдвиг: '))
 elements = int(input('Сколько элементов в списке: '))
 initial_list = []
 var_list = []
-zero_list = []
 
 print('Введите элементы списка по одному')
 
@@ -11,15 +17,11 @@ for _ in range(elements):
     initial_list.append(element)
     var_list.append(0)
 
-zero_list = var_list
-
 print('Изначальный список:', initial_list)
 
 for _ in range(shift):
     for index in range(elements):
         var_list[-index] = initial_list[elements - index - 1]
-    initial_list = var_list
-    var_list = zero_list
+    initial_list = copy_fun(var_list, elements)
 
-print('Сдвинутый список:', initial_list)
-
+print('Сдвинутый список:', var_list)

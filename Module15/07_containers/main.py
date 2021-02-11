@@ -15,6 +15,7 @@ print()
 
 while True:
     weight_new_c = float(input('Введите вес нового контейнера: '))
+    # TODO: Такую же проверку используете выше. Предлагаю вынести в ф-ию, возвращающую True/False;)
     if weight_new_c - int(weight_new_c) == 0 and weight_new_c <= 200:
         break
 
@@ -23,9 +24,11 @@ print()
 count = 0
 for number in range(containers):
     if weight_new_c > weights[number]:
+        # TODO: Предлапгаю подмумать, как избавиться от дублирования...
         print('Номер, куда встанет новый контейнер: ', number + 1)
         count += 1
         break
 
 if count == 0:
+    # TODO: ... да, это дублирования;)
     print('Номер, куда встанет новый контейнер: ', containers + 1)

@@ -8,6 +8,10 @@ while True:
     count = 0
     # TODO: Предлагаю проверять на вхождение при помощи оператора "in":)
     # Не понял(
+    # TODO: Вы можете проверить наличие введенного фильма в списке следующим образом:
+    #  if favorite in films:
+    #      ...
+    #  и не нужно проходиться по всем фильмам в цикл:)
     for number in range(len(films)):
         if favorite == films[number]:
             list_favorite.append(films[number])

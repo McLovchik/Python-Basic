@@ -7,6 +7,10 @@ def check(the_weight):
         return True
 
 
+def conclusion(value):
+    return print('Номер, куда встанет новый контейнер: ', value + 1)
+
+
 for _ in range(containers):
     while True:
         print('Введите вес контейнера:', end=' ')
@@ -30,17 +34,9 @@ print()
 count = 0
 for number in range(containers):
     if weight_new_c > weights[number]:
-        # Предлапгаю подумать, как избавиться от дублирования...
-        # А где это дублирование?
-        # TODO: Так я  же указал в прошлом сообщении. здесь и...
-        print('Номер, куда встанет новый контейнер: ', number + 1)
+        conclusion(number)
         count += 1
         break
 
-
 if count == 0:
-    # ... да, это дублирования;)
-    # TODO: ...здесь.
-    #  У вас только отличаются предаваемые имена прменных (number  и containers),
-    #  но в цеелом это дублирование кода, которого при желании можно избежать;)
-    print('Номер, куда встанет новый контейнер: ', containers + 1)
+    conclusion(containers)

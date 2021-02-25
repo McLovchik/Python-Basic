@@ -13,6 +13,7 @@ create_list('Второй', 7, second_list)
 
 first_list.extend(second_list)
 i_index = 0
+# TODO: Предлагаю подумать над более оптимальным алгоритмом:)
 while i_index <= len(first_list) - 2:
     i_index_two = i_index + 1
     while i_index_two <= len(first_list) - 1:

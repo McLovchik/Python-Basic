@@ -6,7 +6,9 @@ while True:
     if answer == 'пора спать':
         break
     elif answer == 'ушёл':
+        # TODO: Предлагаю действия с гостями вынести в две ф-ии чтобы снять нагрузку с этого цикла:)
         name = input('Имя гостя: ')
+        # TODO: А если уйдет тот, кого нет в списке?;)
         guests.remove(name)
         print('Пока,', name)
     elif answer == 'пришёл':

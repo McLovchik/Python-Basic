@@ -28,8 +28,6 @@ while len(people_list) != 0 and len(skates_list) != 0:
     if skates_list[0] >= people_list[0]:
         count += 1
         people_list.remove(people_list[0])
-        skates_list.remove(skates_list[0])
-    else:
-        skates_list.remove(skates_list[0])
+    skates_list.remove(skates_list[0])
 
 print(count)

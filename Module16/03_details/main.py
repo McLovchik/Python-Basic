@@ -6,10 +6,12 @@ detail = input('Название детали: ')
 summa_money = 0
 summa_det = 0
 
-for i_index in range(0, len(shop)):
-        if shop[i_index][0] == detail:
-                summa_money += shop[i_index][1]
-                summa_det += 1
+# TODO: Проходитесь сразу по списку shop без len() и range()
+# Это так надо? for i_index in len(shop) или как?
+for i_index in range(len(shop)):
+    if shop[i_index][0] == detail:
+        summa_money += shop[i_index][1]
+        summa_det += 1
 
 print('Кол-во деталей -', summa_det)
 print('Общая стоимость -', summa_money)

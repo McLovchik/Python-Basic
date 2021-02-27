@@ -3,7 +3,6 @@ first_list = []
 for i_number in range(160, 176 + 1, 2):
     first_list.append(i_number)
 
-
 second_list = []
 
 for i_number in range(162, 180 + 1, 3):

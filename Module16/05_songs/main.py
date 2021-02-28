@@ -17,11 +17,9 @@ time = 0
 
 for i_num in range(1, songs + 1):
     song = input(f'Название {i_num} песни: ')
-    for i_index in violator_songs:  # Так не работает
-        # TODO: Потому что вам больше не нужно обращаться к списку по индексу чтобы получить элемент.
-        #  Вы уже имеете элемент в переменной i_index (p.s. стоит переименовать)
-        if violator_songs[i_index][0] == song:
-            time += violator_songs[i_index][1]
+    for index in violator_songs:
+        if index[0] == song:
+            time += index[1]
 
 print()
 print('Общее время звучания песен: ', time, 'минут')

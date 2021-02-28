@@ -14,11 +14,17 @@ create_list('Второй', 7, second_list)
 
 first_list.extend(second_list)
 
-# не получается
-# идею бы)
-# TODO:
-#  Проходитесь по элементам списка циклом for
-#      Находите сколько штук данного элемеента в списке
-#      Удаляйте это количество минус 1
+for elem in first_list:
+    count = 0
+    for elem_two in first_list:
+        while elem == elem_two:
+            count += 1
+            break
+    while count != 1:
+        first_list.remove(elem)
+        count -= 1
 
 print('Новый первый список с уникальными элементами:', first_list)
+
+# оказывается я плохо ценил прохождение цикла сразу по элемантам)
+# применив такой метод, сразу всё получилось, спасибо)

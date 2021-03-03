@@ -3,17 +3,14 @@ shop = [['каретка', 1200], ['шатун', 1000], ['седло', 300],
         ['обод', 2000], ['шатун', 200], ['седло', 2700]]
 
 detail = input('Название детали: ')
-# у меня ничего не подчеркивает
-# TODO: Странно. У меня подчееркивает "summa". Видимо особенность pro-версии.
-#  Старайтесь в будущем не использовать для нейминга слова, которых нет в английском языке:)
-summa_money = 0
-summa_det = 0
 
-# TODO: Подходит ли переменная index по смыслу?:)
-for index in shop:
-    if index[0] == detail:
-        summa_money += index[1]
-        summa_det += 1
+sum_money = 0
+sum_details = 0
 
-print('Кол-во деталей -', summa_det)
-print('Общая стоимость -', summa_money)
+for i_element in shop:
+    if i_element[0] == detail:
+        sum_money += i_element[1]
+        sum_details += 1
+
+print('Кол-во деталей -', sum_details)
+print('Общая стоимость -', sum_money)

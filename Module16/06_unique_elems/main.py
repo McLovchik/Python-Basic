@@ -14,6 +14,7 @@ create_list('Второй', 7, second_list)
 
 first_list.extend(second_list)
 
+# TODO: Аналогично 3;)
 for i_elem in first_list:
     count = 0
     for i_elem_two in first_list:

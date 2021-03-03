@@ -15,6 +15,7 @@ special_playlist = []
 songs = int(input('Сколько песен выбрать? '))
 time = 0
 
+# TODO: Аналогично 3;)
 for i_num in range(1, songs + 1):
     song = input(f'Название {i_num} песни: ')
     for i_element in violator_songs:

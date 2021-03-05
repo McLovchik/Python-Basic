@@ -17,9 +17,9 @@ time = 0
 
 for i_num in range(1, songs + 1):
     song = input(f'Название {i_num} песни: ')
-    for i_element in violator_songs:
-        if i_element[0] == song:
-            time += i_element[1]
+    for element in violator_songs:
+        if element[0] == song:
+            time += element[1]
 
 print()
 print('Общее время звучания песен: ', time, 'минут')

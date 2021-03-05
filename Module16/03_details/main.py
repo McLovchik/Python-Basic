@@ -7,9 +7,9 @@ detail = input('Название детали: ')
 sum_money = 0
 sum_details = 0
 
-for i_element in shop:
-    if i_element[0] == detail:
-        sum_money += i_element[1]
+for element in shop:
+    if element[0] == detail:
+        sum_money += element[1]
         sum_details += 1
 
 print('Кол-во деталей -', sum_details)

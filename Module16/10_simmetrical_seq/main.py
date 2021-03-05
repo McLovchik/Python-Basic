@@ -4,8 +4,7 @@ def is_palindrome(num_list):
         reverse_list.append(num_list[i_num])
     if num_list == reverse_list:
         return True
-    else:
-        return False
+    return False
 
 
 numbers_list = []

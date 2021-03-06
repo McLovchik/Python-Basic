@@ -7,13 +7,9 @@ detail = input('Название детали: ')
 sum_money = 0
 sum_details = 0
 
-# TODO: Подходит ли нейминг i_element в данном случае?:)
-#  Под i_... подразумевается индекс чего либо (например элемента списка shop).
-#  В вашем случае в переменной будет храниться не индекс, а сам элемент.
-#  А значит такой нейминг других разработчиков только введет в заблуждение. Предлагаю поправить:)
-for i_element in shop:
-    if i_element[0] == detail:
-        sum_money += i_element[1]
+for element in shop:
+    if element[0] == detail:
+        sum_money += element[1]
         sum_details += 1
 
 print('Кол-во деталей -', sum_details)

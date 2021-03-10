@@ -12,7 +12,6 @@ for i_index in range(len(reverse_symbol_text)):
         break
 right_index = len(symbols_text) - right_index - 1
 
-symbols_text[left_index:right_index + 1] = symbols_text[right_index:left_index - 1:-1]
+symbols_text[left_index + 1:right_index] = symbols_text[right_index - 1:left_index:-1]
 
 print(symbols_text)
-# TODO: А если ввести humanhumanhuman?:)

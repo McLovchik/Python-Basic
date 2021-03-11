@@ -10,7 +10,9 @@ for i_index in range(count_numbers - 1):
 
 print(numbers_list)
 
+# TODO, предлагаю попрактиковаться в List comprehensions и решить в одну строку =)
 for _ in range(numbers_list.count(0)):
     numbers_list.remove(0)
 
 print(numbers_list)
+

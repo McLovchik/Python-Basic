@@ -8,3 +8,5 @@ answer_vowels = [letter_text
 
 print('Список гласных букв:', answer_vowels)
 print('Длина списка:', len(answer_vowels))
+
+# зачёт!

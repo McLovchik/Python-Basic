@@ -5,3 +5,5 @@ answer = [(1 if i_index % 2 == 0
           for i_index in range(number)]
 
 print(answer)
+
+# зачёт!

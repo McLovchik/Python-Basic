@@ -15,3 +15,6 @@ for i_throw in range(throws):
     sticks_list[shot_down_left - 1:shot_down_right] = ['.' for _ in range(number_shot_down)]
 
 print(sticks_list)
+
+# TODO, пожалуйста, выведите результат исходя из примера
+#  Результат: I.....I...

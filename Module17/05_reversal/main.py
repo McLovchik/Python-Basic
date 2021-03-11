@@ -15,3 +15,5 @@ right_index = len(symbols_text) - right_index - 1
 symbols_text[left_index + 1:right_index] = symbols_text[right_index - 1:left_index:-1]
 
 print(symbols_text)
+
+# TODO, сейчас выводим списком. Давайте выведем текстом =)

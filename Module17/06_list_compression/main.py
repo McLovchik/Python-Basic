@@ -14,5 +14,6 @@ print(numbers_list)
 for _ in range(numbers_list.count(0)):
     numbers_list.remove(0)
 
-print(numbers_list)
+# у меня не получается придумать, не создавая новый лист и в интернете тоже не нашёл и нас же не учили этому
 
+print(numbers_list)

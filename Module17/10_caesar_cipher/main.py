@@ -14,3 +14,5 @@ shift = int(input('Введите сдвиг: '))
 output_str = caesar_cipher(input_str, shift)
 
 print('Зашифрованная строка:', output_str)
+
+# зачёт!

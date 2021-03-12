@@ -6,6 +6,8 @@ for i_index in range(len(symbols_text)):
         break
 
 reverse_symbol_text = symbols_text[::-1]
+
+# Наверное right_index лучше создавать заранее. Если в строке нет h, получим ошибку.
 for i_index in range(len(reverse_symbol_text)):
     if reverse_symbol_text[i_index] == 'h':
         right_index = i_index
@@ -18,3 +20,5 @@ print('Ответ: ', end='')
 
 for symbol in symbols_text:
     print(symbol, end='')
+
+# зачёт!

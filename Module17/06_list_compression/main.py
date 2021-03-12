@@ -13,3 +13,5 @@ print(numbers_list)
 numbers_list_answer = [numbers_list[index] for index in range(count_numbers) if numbers_list[index] != 0]
 
 print(numbers_list_answer)
+
+# зачёт!

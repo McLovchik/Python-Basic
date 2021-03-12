@@ -18,3 +18,5 @@ print('Результат: ', end='')
 
 for i_index in range(sticks):
     print(sticks_list[i_index], end='')
+
+# зачёт!

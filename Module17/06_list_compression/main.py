@@ -10,13 +10,6 @@ for i_index in range(count_numbers - 1):
 
 print(numbers_list)
 
-# TODO, предлагаю попрактиковаться в List comprehensions и решить в одну строку =)
-for _ in range(numbers_list.count(0)):
-    numbers_list.remove(0)
+numbers_list_answer = [numbers_list[index] for index in range(count_numbers) if numbers_list[index] != 0]
 
-# у меня не получается придумать, не создавая новый лист и в интернете тоже не нашёл и нас же не учили этому
-# TODO, по идее, нам необходимо взять все элементы списка numbers_list, неравные "0".
-#  Можете создать новый список =)
-
-
-print(numbers_list)
+print(numbers_list_answer)

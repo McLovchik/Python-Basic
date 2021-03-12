@@ -14,10 +14,7 @@ for i_throw in range(throws):
     number_shot_down = shot_down_right - shot_down_left + 1
     sticks_list[shot_down_left - 1:shot_down_right] = ['.' for _ in range(number_shot_down)]
 
-print(sticks_list)
+print('Результат: ', end='')
 
-# TODO, пожалуйста, выведите результат исходя из примера
-#  Результат: I.....I...
-
-# создать новую переменную и добавлять с помощью "+"?
-# TODO, или циклом, в print можно использовать параметр end =)
+for i_index in range(sticks):
+    print(sticks_list[i_index], end='')

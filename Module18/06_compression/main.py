@@ -20,3 +20,4 @@ while i_number < len(message_list):
 print('Закодированная строка: ', new_list)
 
 # как объеденить?
+# TODO: Попробуйте метод join:)

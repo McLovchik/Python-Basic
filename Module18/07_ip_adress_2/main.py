@@ -1,23 +1,18 @@
 while True:
-    # TODO: "count" по сути выполняет ф-ию флага. По этому предлагаю использовать флаг.
-    #  А вообще можно обойтись и без флага, и без счетчика если использовать конструкцию for - else;)
-    count = 0
     ip = input('Введите IP: ')
     ip_list = ip.split('.')
-    if len(ip_list) == 4:
+    if len(ip_list) == 4 and ip.count('.') == 3:
         for number in ip_list:
             if not number.isdigit():
                 print(number, '- не целое число')
-                count += 1
                 break
             elif int(number) > 255:
                 print(number, 'превышает 255')
-                count += 1
                 break
+        else:
+            break
     else:
-        print('IP-адрес состоит из четырех чисел')
-        count += 1
-    if count == 0:
-        break
+        print('Адрес - это четыре числа, разделенные точками')
+
 
 print('IP-адрес корректен')

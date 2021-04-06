@@ -14,10 +14,11 @@ while i_number < len(message_list):
             count += 1
         else:
             break
-    new_list.append(count)
+    new_list.append(str(count))
     i_number += count
 
-print('Закодированная строка: ', new_list)
 
-# как объеденить?
-# TODO: Попробуйте метод join:)
+new_new_list = ''.join(new_list)
+print('Закодированная строка: ', new_new_list)
+
+# я до этого так и сделал, только забыл, что я соединял цифры и буквами)

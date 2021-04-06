@@ -1,14 +1,14 @@
-def check_start(suspect, file_name):
-    for elem in suspect:
+def check(begin_list, end_list, file_name):
+    for elem in begin_list:
         if file_name.startswith(elem):
-            return True
-    return False
+            print('Ошибка: название начинается на один из специальных символов')
+            return False
 
-
-def check_end(suspect, file_name):
-    for elem in suspect:
-        if file_name.endswith(elem):
+    for elem_two in end_list:
+        if file_name.endswith(elem_two):
             return True
+
+    print('Ошибка: неверное расширение файла. Ожидалось .txt или .docx')
     return False
 
 
@@ -17,13 +17,7 @@ end_list = ['.txt', '.docx']
 
 name = input('Название файла: ')
 
-if check_start(begin_list, name):
-    print('Ошибка: название начинается на один из специальных символов')
-elif not check_end(end_list, name):
-    print('Ошибка: неверное расширение файла. Ожидалось .txt или .docx')
-else:
+if check(begin_list, end_list, name):
     print('Файл назван верно.')
 
-# Можно ли отправить функцию в другую создаваемую функцию, чтобы не нарушалось правило dry
-# TODO: Ф-ию можно. Но дело в том, что startswith() и endswith() это не ф-ии, а методы.
-#  Тут правильнее сделать по другому: выполняйте обе проверки за одно прохождение по слову:)
+# Всё таки методы нельзя отправлять в функции?

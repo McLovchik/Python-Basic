@@ -10,6 +10,7 @@ while i_number < len(message_list):
     count = 1
     new_list.append(message_list[i_number])
     for i_number_next in range(i_number + 1, len(message_list)):
+        # TODO: Предлагаю подумать как изменить ветвление ниже так чтобы оператор else был не нужен:)
         if message_list[i_number] == message_list[i_number_next]:
             count += 1
         else:

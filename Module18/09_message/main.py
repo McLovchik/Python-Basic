@@ -1,7 +1,9 @@
+# TODO: Есть ли необходимость в ф-ии, которая только возвращает срез?:)
 def rollover(rollover__word):
     return rollover__word[::-1]
 
 
+# TODO: Аналогично. Ф-ия по сути делает то же самое, что и метод isalpha().
 def check_is_alpha(check_is_alpha__word):
     if check_is_alpha__word.isalpha():
         return True
@@ -39,3 +41,4 @@ for word in message_split:
 message_split = ' '.join(message_split)
 
 print(' '.join(new_message_split))
+# TODO: Не смотря на замечания выше предлагаю декомпозировать ф-ию :D (после их исправлений)

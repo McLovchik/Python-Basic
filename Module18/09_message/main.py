@@ -9,6 +9,8 @@ def check_is_alpha(check_is_alpha__word):
         return True
 
 
+# а если мне просто так удобнее было в данной задаче? и вроде понятность не теряется
+
 message = input('Сообщение: ')
 message_split = message.split()
 
@@ -34,11 +36,8 @@ for word in message_split:
         word = rollover(word)
         new_message_split.append(word)
 
-    # b = a[::-1]
-    # a[len(a) - 1]
-    # 'v'
-
 message_split = ' '.join(message_split)
 
 print(' '.join(new_message_split))
 # TODO: Не смотря на замечания выше предлагаю декомпозировать ф-ию :D (после их исправлений)
+# и это обязательно ли, если мне так удобнее? и как мне кажется так будет хуже

@@ -1,8 +1,7 @@
 while True:
     ip = input('Введите IP: ')
     ip_list = ip.split('.')
-    # TODO: Есть ли необходимость в "ip.count('.') == 3"?:)
-    if len(ip_list) == 4 and ip.count('.') == 3:
+    if len(ip_list) == 4:
         for number in ip_list:
             if not number.isdigit():
                 print(number, '- не целое число')

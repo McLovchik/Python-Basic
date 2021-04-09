@@ -11,15 +11,9 @@ while i_number < len(message_list):
     new_list.append(message_list[i_number])
     i_number_next = i_number
     for i_number_next in range(i_number + 1, len(message_list)):
-        # TODO: Предлагаю подумать как изменить ветвление ниже так чтобы оператор else был не нужен:)
-        # я не догадался как(
-        # TODO: Откатите код к прошлому решению прооверяйте не на равенство, а на неравенство.
-        #  Если действительно не равно, то break и выход из цикла.
-        #  Если нет, то выхода не произойдет и исполнится код дальше (увеличение счетчика)
-        if message_list[i_number] == message_list[i_number_next]:
-            count += 1
-        else:
+        if message_list[i_number] != message_list[i_number_next]:
             break
+        count += 1
     new_list.append(str(count))
     i_number += count
 

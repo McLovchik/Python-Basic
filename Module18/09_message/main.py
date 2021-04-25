@@ -8,7 +8,6 @@ message = input('Сообщение: ')
 message_split = message.split()
 
 new_message_split = []
-
 for word in message_split:
     if not word.isalpha():
         begin_index = 0

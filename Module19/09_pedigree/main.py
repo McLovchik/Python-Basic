@@ -1,24 +1,30 @@
-people = int(input('Введите количество человек: '))
-gen_dict = dict()
-gen_pairs = dict()
-
-for i_pair in range(1, people):
-    pair = input(f'{i_pair} пара: ').split(' ')
-    gen_pairs[pair[0]] = pair[1]
-
-for i_key in gen_pairs:
+def comp_gen_tree(amount):
+    childs_parents = dict()
     count = 0
-    if gen_pairs[i_key] not in gen_dict:
-        gen_dict[gen_pairs[i_key]] = 0
-    man = i_key
     while True:
-        if man in gen_pairs.values():
-            count += 1
-            man = gen_pairs[man]  # = ключу
+        count += 1
+        child_parent = input(f'{count} пара: ').split()
+        if child_parent[1] not in childs_parents:
+            childs_parents.setdefault(child_parent[1], 0)
+            childs_parents.setdefault(child_parent[0], 1)
+        elif childs_parents[child_parent[1]] == 0:
+            childs_parents[child_parent[0]] = 1
         else:
-            gen_dict[i_key] = count
+            childs_parents[child_parent[0]] = childs_parents[child_parent[1]] + 1
+
+        if len(childs_parents) >= amount:
             break
 
-print(gen_dict)
+    return childs_parents
 
-# не доделал
+
+amount_people = int(input('Введите количество человек: '))
+var_height_man = comp_gen_tree(amount_people)
+height_man = sorted(var_height_man.keys())
+print(height_man)
+#
+print('“Высота” каждого члена семьи:')
+#
+for human in height_man:
+    height = var_height_man.get(human)
+    print(f'{human}: {height}')

@@ -24,4 +24,13 @@ store = {
     ],
 }
 
-# TODO здесь писать код
+for product in goods:
+    for code in store:
+        if goods[product] == code:
+            price = 0
+            count = 0
+            for col in range(len(store[code])):
+                price += store[code][col]['quantity'] * store[code][col]['price']
+                count += store[code][col]['quantity']
+            print(f'{product} - {count} шт, стоимость {price} руб')
+            break

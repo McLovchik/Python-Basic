@@ -8,4 +8,4 @@ def min_divider(number):
     return divider
 
 
-print('Наименьший делитель, отличный от единицы:',min_divider(number))
+print('Наименьший делитель, отличный от единицы:', min_divider(number))

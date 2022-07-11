@@ -1,9 +1,18 @@
+def interests_and_len_surnames(students_dict):
+    interests_list = list()
+    string_surnames = ''
+    for j_id in students_dict:
+        interests_list += (students_dict[j_id]['interests'])
+        string_surnames += students_dict[j_id]['surname']
+    return interests_list, len(string_surnames)
+
+
 students = {
     1: {
         'name': 'Bob',
         'surname': 'Vazovski',
         'age': 23,
-        'interests': ['biology, swimming']
+        'interests': ['biology', 'swimming']
     },
     2: {
         'name': 'Rob',
@@ -19,26 +28,15 @@ students = {
     }
 }
 
+id_age = list()
+for i_id in students:
+    id_age_list = (i_id, students[i_id]['age'])
+    id_age_tuple = tuple(id_age_list)
+    id_age.append(id_age_tuple)
 
-def f(dict):
-    lst = []
-    string = ''
-    for i in dict:
-        lst += (dict[i]['interests'])
-        string += dict[i]['surname']
-    cnt = 0
-    for s in string:
-        cnt += 1
-    return lst, cnt
+interests = interests_and_len_surnames(students)[0]
+len_surnames = interests_and_len_surnames(students)[1]
 
-
-pairs = []
-for i in students:
-    pairs += (i, students[i]['age'])
-
-
-my_lst = f(students)[0]
-l = f(students)[1]
-print(my_lst, l)
-
-# TODO исправить код
+print('Список пар "ID студента — возраст":', id_age)
+print('Полный список интересов всех студентов:', interests)
+print('Общая длина всех фамилий студентов:', len_surnames)

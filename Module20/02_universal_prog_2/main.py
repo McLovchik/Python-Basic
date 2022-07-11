@@ -15,6 +15,3 @@ def is_prime(number):
 text = input('Введите текст: ').split()
 i_list = crypto(text)
 print(i_list)
-
-# как быть с вводом, я не понял. Нужно исп-ть tuple?
-# и что значит основной код??

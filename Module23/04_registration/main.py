@@ -1,5 +1,5 @@
-file_out_good = 'registrations_good.log'
-file_out_bad = 'registrations_bad.log'
+file_out_good = open('registrations_good.log', 'w', encoding='utf-8')
+file_out_bad = open('registrations_bad.log', 'w', encoding='utf-8')
 
 
 def check_exceptions():
@@ -11,17 +11,23 @@ def check_exceptions():
         raise SyntaxError('Поле «Имейл» НЕ содержит @ и . (точку)')
     elif not 10 <= int(age) <= 99:
         raise ValueError('Поле «Возраст» НЕ является числом от 10 до 99')
-    with open(file_out_good, mode='a', encoding='utf-8') as file_good:
-        file_good.write(i_line)
+    file_out_good.write(i_line)
 
 
 with open('registrations.txt', 'r', encoding='utf-8') as registration_file:
     for i_line in registration_file:
         try:
-            name, mail, age = i_line.split(' ')
+            name, mail, age = i_line.rstrip('\n').split(' ')
             check_exceptions()
-        except (IndexError, NameError, SyntaxError, ValueError) as exc:
-            with open(file_out_bad, mode='a', encoding='utf-8') as file_bad:
-                file_bad.write(f"{i_line} _____ {exc} _____")
+        except IndexError as exc_i_e:
+            file_out_bad.write(f'{name} {mail} {age}         {exc_i_e}\n')
+        except NameError as exc_n_e:
+            file_out_bad.write(f'{name} {mail} {age}         {exc_n_e}\n')
+        except SyntaxError as exc_s_e:
+            file_out_bad.write(f'{name} {mail} {age}         {exc_s_e}\n')
+        except ValueError as exc_v_e:
+            file_out_bad.write(f'{name} {mail} {age}         {exc_v_e}\n')
 
-# как оформить нормальный вывод?
+
+file_out_good.close()
+file_out_bad.close()

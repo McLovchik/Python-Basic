@@ -1,9 +1,7 @@
 import math
-from abc import ABC
 
 
-class MyMath(ABC):
-    """Абстрактный класс MyMath"""
+class MyMath:
     @classmethod
     def circle_len(cls, radius: int) -> float:
         return 2 * math.pi * radius
